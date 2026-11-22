@@ -1,0 +1,2 @@
+# ScholarPath
+Scholarship eligibility assistance
