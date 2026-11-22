@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LPU Scholarship Assistant</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>LPU Scholarship Assistant</h1>
+  </header>
+  <main>
+    <p>Check the
+      <a href="https://www.lpu.in/scholarship/scholarship.php">official LPU website</a>
+      for actual scholarship details.</p>
+    <section>
+      <h2>Student details</h2>
+      <form id="profile-form">
+        <label for="name">Name</label>
+        <input id="name" type="text" required>
+        <label for="cgpa">CGPA (out of 10)</label>
+        <input id="cgpa" type="number" min="0" max="10" step="0.01" required>
+        <label for="income">Annual family income (₹)</label>
+        <input id="income" type="number" min="0" step="1" required>
+        <label for="interest">Achievement category</label>
+        <select id="interest">
+          <option value="">None selected</option>
+          <option>LPUNEST</option>
+          <option>Innovation</option>
+          <option>Social service</option>
+          <option>Sports &amp; cultural</option>
+        </select>
+        <button type="submit">Save and check matches</button>
+      </form>
+      <p id="message" role="status"></p>
+    </section>
+    <section>
+      <h2>Scholarships</h2>
+      <div class="filters">
+        <label for="search">Search</label>
+        <input id="search" type="search" placeholder="Scholarship name">
+        <label for="filter">Show</label>
+        <select id="filter">
+          <option value="all">All scholarships</option>
+          <option value="matches">Matches</option>
+          <option value="saved">Saved</option>
+        </select>
+      </div>
+      <div id="scholarships" class="cards"></div>
+    </section>
+    <section>
+      <h2>My applications</h2>
+      <p>Keep track of your applications and update their status as you progress.</p>
+      <div id="applications"></div>
+    </section>
+    <section>
+      <h2>How it works</h2>
+      <ol>
+        <li>Enter your details and save them.</li>
+        <li>The app checks your CGPA, income and category against the sample rules.</li>
+        <li>Save a scholarship or add it to your application list.</li>
+        <li>Update the status when you start or submit an application.</li>
+      </ol>
+      <p>Your details stay in this browser. A sample match does not guarantee an award.</p>
+    </section>
+  </main>
+</body>
+</html>
